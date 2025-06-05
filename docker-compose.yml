@@ -1,8 +1,6 @@
-version: "3.9"
-
 services:
   web:
-    image: $DOCKER_USERNAME/vchdbuxoro:latest  # Remote image used in production
+    image: dilshod1405/vchdbuxoro
     container_name: vchdbuxoro
     restart: always
     env_file:
