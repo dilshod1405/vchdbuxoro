@@ -21,11 +21,14 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 225
           script: |
-            cd /home/user/vchdbuxoro
+            cd /home/user
+            if [ ! -d "vchdbuxoro" ]; then
+              git clone https://github.com/YOUR_USERNAME/vchdbuxoro.git
+            fi
+            cd vchdbuxoro
             git pull origin main
             echo "Pulling latest Docker image..."
             docker compose pull
             echo "Restarting Docker Compose stack..."
             docker compose down
             docker compose up -d --build
-            
