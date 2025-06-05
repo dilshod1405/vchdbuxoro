@@ -23,7 +23,7 @@ jobs:
           script: |
             cd /home/user
             if [ ! -d "vchdbuxoro" ]; then
-              git clone https://github.com/YOUR_USERNAME/vchdbuxoro.git
+              git clone https://github.com/dilshod1405/vchdbuxoro.git
             fi
             cd vchdbuxoro
             git pull origin main
