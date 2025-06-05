@@ -15,6 +15,7 @@ class Information(models.Model):
         return self.title
 
 
+
 class Service(models.Model):
     title = models.CharField(max_length=255, verbose_name='Sarlavha')
     description = models.TextField(verbose_name='Tavsif', blank=True, null=True)
