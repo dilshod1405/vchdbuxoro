@@ -6,7 +6,7 @@ services:
     env_file:
       - .env
     ports:
-      - "8006:8000"
+      - "8000:8000"
     command: ["sh", "/app/entrypoint.sh"]
     depends_on:
       - db

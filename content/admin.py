@@ -4,18 +4,18 @@ from .models import Information, Service, Message
 
 @admin.register(Information)
 class InformationAdmin(admin.ModelAdmin):
-    list_display = ('title', 'photo', 'created_at', 'updated_at', 'id')
+    list_display = ('title_uz', 'title_ru', 'photo', 'created_at', 'updated_at', 'id')
     list_editable = ('photo',)
-    search_fields = ('title',)
+    search_fields = ('title_uz', 'title_ru')
     list_filter = ('created_at', 'updated_at')
     ordering = ('-created_at',)
     
 
 @admin.register(Service)
 class ServiceAdmin(admin.ModelAdmin):
-    list_display = ('title', 'picture', 'created_at', 'updated_at', 'id')
+    list_display = ('title_uz', 'title_ru', 'picture', 'created_at', 'updated_at', 'id')
     list_editable = ('picture',)
-    search_fields = ('title',)
+    search_fields = ('title', 'title_ru')
     list_filter = ('created_at', 'updated_at')
     ordering = ('-created_at',)
 
