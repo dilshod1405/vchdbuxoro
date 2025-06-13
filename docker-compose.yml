@@ -8,20 +8,4 @@ services:
     ports:
       - "8000:8000"
     command: ["sh", "/app/entrypoint.sh"]
-    depends_on:
-      - db
 
-  db:
-    image: postgres:15
-    restart: always
-    environment:
-      POSTGRES_DB: ${DB_NAME}
-      POSTGRES_USER: ${DB_USER}
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    ports:
-      - "5433:5432"
-
-volumes:
-  postgres_data:
